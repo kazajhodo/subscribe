@@ -1,0 +1,14 @@
+<div id="mailchimp-header">
+  <form id="signup" action="" method="get">
+      <fieldset>
+          <!-- <legend>Join Our Mailing List</legend> -->
+          <input class="required-entry" type="text" name="fname" id="fname" placeholder="*First Name:" />
+          <input class="required-entry" type="text" name="lname" id="lname" placeholder="*Last Name:" />
+          <input class="required-entry validate-email" type="text" name="email" id="email" placeholder="*Email:" />
+          <input type="submit" class="button" value="Submit >">
+      </fieldset>
+  </form>
+  <div id="response">
+      <?php if($this->getRequest()->getPost()){ return Mage::helper('ash_subscribe')->joinList(); } ?>
+  </div>
+</div>
